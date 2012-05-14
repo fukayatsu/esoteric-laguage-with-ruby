@@ -1,4 +1,5 @@
 def bottles(num)
+  num = num % 100
   if (num == 0) then
     return 'no more bottles'
   elsif (num == 1) then
@@ -8,14 +9,17 @@ def bottles(num)
   end
 end
 
-99.downto 1 do |num|
-  puts """
-#{bottles num} of beer on the wall, #{bottles num} of beer.
-Take one down and pass it around, #{bottles(num-1)} of beer on the wall.
-"""
+def action(num)
+  unless num == 0 then
+    return "Take one down and pass it around"
+  else
+    return "Go to store and buy some more"
+  end
 end
 
-puts '''
-No more bottles of beer on the wall, no more bottles of beer.
-Go to the store and buy some more, 99 bottoles of beer on the wall.
-'''
+99.downto 0 do |num|
+  puts """
+#{bottles num} of beer on the wall, #{bottles num} of beer.
+#{action num}, #{bottles(num-1)} of beer on the wall.
+"""
+end
