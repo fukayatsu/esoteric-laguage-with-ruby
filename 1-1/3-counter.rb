@@ -12,9 +12,9 @@ class Counter
   end
 end
 
-ct = Counter.new(2)
-p ct.value #=>2
-ct.inc
-ct.inc
-ct.inc
-p ct.value #=>5
+#ct = Counter.new(2)
+#p ct.value #=>2
+#ct.inc
+#ct.inc
+#ct.inc
+#p ct.value #=>5
